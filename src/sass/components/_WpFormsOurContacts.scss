@@ -1,0 +1,193 @@
+.OurContacts {
+  &-Item {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .OurContacts-Icon {
+        background-color: $primary-accent-1;
+        &:before {
+          color: $secondary-text;
+        }
+      }
+
+      .OurContacts-Info {
+        a {
+          color: $primary-accent-1;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 70%;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba($primary-accent-1, 0.25);
+    }
+  }
+
+  &-Icon {
+    position: relative;
+    @extend %fa-icon;
+    min-width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid $primary-accent-1;
+    margin-right: 15px;
+    transition: background-color 0.3s ease-out;
+
+    &:before {
+      color: $primary-accent-1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.1rem;
+    }
+
+    &_Address {
+      @extend .fas;
+      &:before {
+        content: fa-content($fa-var-map-marker-alt);
+      }
+    }
+    &_Phone {
+      @extend .fas;
+      &:before {
+        content: fa-content($fa-var-phone);
+      }
+    }
+    &_Email {
+      @extend .fas;
+      &:before {
+        content: fa-content($fa-var-envelope);
+      }
+    }
+    &_Telegram {
+      @extend .fab;
+      &:before {
+        content: fa-content($fa-var-telegram-plane);
+      }
+    }
+  }
+
+  &-Info {
+    & > p:first-child {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: $primary-text;
+      transition: color 0.3s ease-out;
+    }
+  }
+
+  &-Form {
+    & > form {
+      display: flex;
+      flex-flow: column nowrap;
+      background-color: $primary-accent-2;
+      width: 80%;
+      padding: 65px 40px;
+      margin-right: 0;
+      margin-left: auto;
+      border-radius: $border-radius;
+    }
+
+    & > .wpforms-confirmation-container-full {
+      margin-bottom: 500px !important;
+    }
+
+    & label {
+      font-size: 1.2rem !important;
+    }
+    & input,
+    & textarea {
+      margin-bottom: 30px !important;
+      width: 100% !important;
+    }
+  }
+}
+
+@include mq-max(1259px) {
+  .OurContacts {
+    &-Form {
+      & > form {
+        width: 92% !important;
+      }
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .OurContacts {
+    margin-bottom: 40px;
+
+    &-Icon {
+      margin-right: 25px;
+    }
+
+    &-Form {
+      & > form {
+        width: 100% !important;
+      }
+
+      & > .wpforms-confirmation-container-full {
+        margin-bottom: 130px !important;
+      }
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .OurContacts {
+    &-Form {
+      & > form {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      & label {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
+
+@include mq-max(380px) {
+  .OurContacts {
+    &-Item {
+      justify-content: center;
+      text-align: center;
+    }
+    &-Icon {
+      display: none;
+    }
+    &-Form {
+      & > form {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      & > .wpforms-confirmation-container-full {
+        margin-bottom: 90px !important;
+      }
+    }
+  }
+}

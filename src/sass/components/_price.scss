@@ -1,0 +1,42 @@
+.Price {
+  &-FullPrice {
+    & > p {
+      font-size: 1.4rem;
+      margin-top: 70px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Price {
+    &-FullPrice {
+      & > p {
+        margin-top: 45px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Price {
+    &-FullPrice {
+      & > p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .Price {
+    &-FullPrice {
+      & > p {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

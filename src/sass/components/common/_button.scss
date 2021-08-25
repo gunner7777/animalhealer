@@ -1,0 +1,56 @@
+.vgButton {
+  display: inline-block;
+  width: 300px;
+  line-height: 50px;
+  border-radius: $border-radius;
+  border: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s linear;
+  text-align: center;
+
+  &:focus {
+    outline-color: $primary-accent-1;
+  }
+
+  &_Primary {
+    background-color: $primary-accent-1;
+    color: $secondary-text;
+    @extend .custom-box-shadow;
+
+    &:hover {
+      background-color: $primary-accent-3;
+    }
+  }
+
+  &_Transparent {
+    background-color: transparent;
+    border: 2px solid $bg-3;
+    color: $secondary-text;
+
+    &:hover {
+      background-color: $bg-3;
+      color: $primary-text;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .vgButton {
+    width: 250px;
+    line-height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@include mq-max(350px) {
+  .vgButton {
+    width: 210px;
+  }
+}
+
+@include mq-max(305px) {
+  .vgButton {
+    width: 180px;
+    font-size: 0.9rem;
+  }
+}

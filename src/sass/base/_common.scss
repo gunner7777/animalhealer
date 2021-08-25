@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  //line-height: 1;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+//body temp
+body {
+  //overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+figure {
+  margin: 0;
+  word-break: break-word;
+}
+
+.Text {
+  &_Right {
+    text-align: right;
+  }
+
+  &_Center {
+    text-align: center;
+  }
+
+  &_Left {
+    text-align: left;
+  }
+
+  &_Uppercase {
+    text-transform: uppercase;
+  }
+}
+
+img {
+  vertical-align: baseline;
+}

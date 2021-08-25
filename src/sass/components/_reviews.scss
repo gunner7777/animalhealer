@@ -1,0 +1,63 @@
+.Reviews {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &-Item {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: $border-radius;
+    @extend .custom-box-shadow;
+    cursor: pointer;
+    color: $primary-text;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: $primary-accent-2;
+    }
+  }
+
+  &-Name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &-Text {
+    height: 210px;
+    overflow: hidden;
+  }
+}
+
+@include mq-max(991px) {
+  .Reviews {
+    flex-flow: row wrap;
+
+    &-Item {
+      width: 90%;
+      height: auto;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    &-Text {
+      height: auto;
+      max-height: 210px;
+      overflow: hidden;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Reviews {
+    &-Item {
+      padding: 15px;
+      width: 100%;
+    }
+  }
+}

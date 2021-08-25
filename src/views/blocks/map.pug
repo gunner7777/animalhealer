@@ -1,0 +1,38 @@
+.container
+  .Section
+    h2.Section-Title Наши контакты
+    .row
+      .OurContacts.col-12.col-lg-6
+        .OurContacts-Item
+          .OurContacts-Icon.OurContacts-Icon_Address
+          .OurContacts-Info
+            p Адрес
+            p г. Киров, Ленинский р-н, п. Чистые Пруды, ул. Советская, д.16
+        .OurContacts-Item
+          .OurContacts-Icon.OurContacts-Icon_Phone
+          .OurContacts-Info
+            p Телефон
+            p
+              a(href="tel:+79513560225" target="_blank" rel="noopener") +7 (951) 356 02 25
+        .OurContacts-Item
+          .OurContacts-Icon.OurContacts-Icon_Email
+          .OurContacts-Info
+            p Email
+            p
+              a(href="mailto:soszoo@vgsha.info" target="_blank" rel="noopener") soszoo@vgsha.info
+        .OurContacts-Item
+          .OurContacts-Icon.OurContacts-Icon_Telegram
+          .OurContacts-Info
+            p Telegram Bot
+            p @soszoovgsha
+      .col-12.col-lg-6
+        form(action="").OurContacts-Form
+          label(for="name") Ваше имя
+          input.vgInput(type="text" id="name" placeholder="Ваше имя")
+          label(for="mail") Ваш email
+          input.vgInput(type="text" id="mail" placeholder="Ваш email")
+          label(for="message") Сообщение
+          textarea.vgTextarea(id="message" placeholder="Сообщение")
+          button.vgButton.vgButton_Primary Отправить
+.Map
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2db21c393963c2bdf096509e6c1b94a00b5014fe6c76cdb098ca94d69d031f46&amp;width=100%25&amp;height=550&amp;lang=ru_RU&amp;scroll=true"></script>

@@ -1,0 +1,39 @@
+.AboutClinic {
+  &-Outer {
+    min-height: 500px;
+    background-image: linear-gradient(rgba($bg-2, 0.35), rgba($bg-2, 0.38)),
+      url(../../images/about_clinic.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 1 0 auto;
+  }
+
+  & > p {
+    color: $secondary-text;
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    font-weight: 500;
+
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .AboutClinic {
+    & > p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .AboutClinic {
+    & > p {
+      font-size: 1.1rem;
+    }
+  }
+}

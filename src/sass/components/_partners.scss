@@ -1,0 +1,41 @@
+.Partners {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+
+  &-Outer {
+    background-color: $bg-1;
+  }
+
+  &-Item {
+    width: 150px;
+    height: 100px;
+    background-color: $bg-2;
+  }
+
+  &-Dots {
+    display: flex;
+    justify-content: center;
+
+    & > li {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+      border-radius: 50%;
+      background-color: $bg-3;
+      @extend .custom-box-shadow;
+      cursor: pointer;
+      transition: background-color .3s ease;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover,
+      &.Dots_Active {
+        background-color: $primary-accent-1;
+      }
+    }
+  }
+}

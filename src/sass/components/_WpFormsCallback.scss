@@ -1,0 +1,100 @@
+.Callback {
+  & > form,
+  & .wpforms-field-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .wpforms-field-container > * {
+    margin-right: 36px !important;
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &-Policy {
+    font-size: 0.8rem;
+    text-align: center;
+
+    & > a {
+      color: $primary-accent-1;
+      font-weight: 500;
+      transition: color 0.3s ease-out;
+
+      &:hover {
+        color: $primary-accent-3;
+      }
+    }
+  }
+
+  /* & > * {
+      margin-right: 36px;
+
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  } */
+}
+
+@include mq-max(1050px) {
+  .Callback {
+    & .wpforms-field-container > * {
+      margin-right: 15px !important;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .Callback {
+    & > form,
+    & .wpforms-field-container {
+      flex-flow: row wrap !important;
+    }
+
+    & .wpforms-field-container > * {
+      margin-bottom: 20px !important;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Callback {
+    & .vgInput {
+      width: 80% !important;
+    }
+    & [type="text"] {
+      width: 100% !important;
+    }
+    & .wpforms-field-container > * {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Callback {
+    & .vgInput {
+      width: 90% !important;
+    }
+    & [type="text"] {
+      width: 100% !important;
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .Callback {
+    & .vgInput {
+      width: 95% !important;
+    }
+    & [type="text"] {
+      width: 100% !important;
+    }
+  }
+}

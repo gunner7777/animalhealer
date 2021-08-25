@@ -1,0 +1,29 @@
+.RecordDoctor {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  padding: 30px;
+  background-color: $bg-3;
+  z-index: 99;
+
+  &_Show {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &-Form {
+    & > form {
+      & label {
+        font-size: 1.2rem !important;
+      }
+      & input,
+      & select,
+      & .vgCheckbox {
+        margin-bottom: 30px !important;
+        width: 100% !important;
+      }
+    }
+  }
+}

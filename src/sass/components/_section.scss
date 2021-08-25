@@ -1,0 +1,56 @@
+.Section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &-Title {
+    font-family: "Raleway", "Helvetica", Arial sans-serif;
+    font-weight: 600;
+    color: $primary-text;
+    font-size: 3.7rem;
+    margin-bottom: 40px;
+    text-align: center;
+
+    &_Dark {
+      color: $secondary-text;
+    }
+  }
+
+  &-ShowAll {
+    margin-top: 50px;
+  }
+}
+
+@include mq-max(991px) {
+  .Section {
+    &-Title {
+      font-size: 2.7rem;
+    }
+  }
+}
+
+@include mq-max(767px) {
+  .Section {
+    &-Title {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Section {
+    &-Title {
+      font-size: 1.8rem;
+    }
+    &-ShowAll {
+      margin-top: 25px;
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .Section {
+    &-Title {
+      font-size: 1.5rem;
+    }
+  }
+}

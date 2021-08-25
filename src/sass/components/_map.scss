@@ -1,0 +1,23 @@
+.Map {
+  margin-top: -135px;
+  z-index: -1;
+  height: 550px;
+}
+
+@include mq-max(991px) {
+  .Map {
+    height: 450px;
+  }
+}
+
+@include mq-max(575px) {
+  .Map {
+    height: 400px;
+  }
+}
+
+@include mq-max(380px) {
+  .Map {
+    height: 350px;
+  }
+}

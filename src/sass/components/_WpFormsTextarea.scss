@@ -1,0 +1,26 @@
+.vgTextarea {
+  & > textarea {
+    width: 300px !important;
+    height: 150px !important;
+    border: none !important;
+    border-radius: $border-radius !important;
+    padding: 8px 15px !important;
+    font-size: 1.2rem !important;
+    resize: none !important;
+    @extend .custom-box-shadow;
+
+    &:focus {
+      outline-color: $primary-accent-1 !important;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .vgTextarea {
+    & > textarea {
+      width: 250px !important;
+      height: 100px !important;
+      font-size: 1rem !important;
+    }
+  }
+}

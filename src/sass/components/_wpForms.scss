@@ -1,0 +1,40 @@
+div.wpforms-container-full .wpforms-form button[type="submit"] {
+  padding: 0 !important;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+div.wpforms-container-full .wpforms-form select.wpforms-field-medium {
+  max-width: none !important;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field,
+div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+  padding: 0 !important;
+}
+
+.wpforms-confirmation-container-full,
+div[submit-success]
+  > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+  background: $primary-accent-1 !important;
+  border: none !important;
+  border-radius: $border-radius !important;
+  color: $secondary-text !important;
+  @extend .custom-box-shadow;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  font-weight: 400 !important;
+}
+
+div.wpforms-container-full .wpforms-form input[type="checkbox"] {
+  border: none !important;
+  background-color: none !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  opacity: 0 !important;
+  width: 14px;
+  height: 14px;
+  margin: 0 !important;
+  display: none;
+  vertical-align: baseline;
+}

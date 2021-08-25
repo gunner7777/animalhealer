@@ -1,0 +1,143 @@
+.Specialists {
+  background-color: $bg-1;
+
+  &-Grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &-Item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 270px;
+    height: 320px;
+    border-radius: $border-radius;
+    @extend .custom-box-shadow;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    color: $primary-text;
+
+    &:hover {
+      background-color: $primary-accent-2;
+    }
+
+    & > img {
+      border-radius: 50%;
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  &-About {
+    position: relative;
+  }
+
+  &-Name {
+    font-size: 1.1rem;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 18px;
+
+    &:after {
+      content: "";
+      width: 80px;
+      height: 1px;
+      background-color: rgba($primary-accent-1, 0.25);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+  }
+
+  &-Name,
+  &-Spec {
+    text-align: center;
+  }
+
+  &-ShowAll {
+    margin-top: 10px;
+  }
+}
+
+@include mq-max(767px) {
+  .Specialists {
+    &-Item {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-left: 0;
+
+      & > img {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+
+    &-Name {
+      &:after {
+        left: 0;
+        transform: translateX(25%);
+      }
+    }
+
+    &-Name,
+    &-Spec {
+      text-align: left;
+    }
+  }
+}
+
+@include mq-max(500px) {
+  .Specialists {
+    &-Item {
+      display: flex;
+      flex-flow: column nowrap;
+
+      & > img {
+        margin-bottom: 15px;
+        margin-right: 0;
+        width: 140px;
+      }
+    }
+
+    &-Name {
+      margin-top: 15px;
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &-Name,
+    &-Spec {
+      text-align: center;
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .Specialists {
+    &-Item {
+      & > img {
+        margin-bottom: 15px;
+        margin-right: 0;
+        width: 120px;
+      }
+    }
+
+    &-Name {
+      font-size: 1rem;
+    }
+  }
+}

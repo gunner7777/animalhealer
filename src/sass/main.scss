@@ -1,0 +1,63 @@
+/*!
+Theme Name: Vetclinic VGATU
+Author: BuzmakovVI
+Description: vetclinic theme
+Version: 1.0
+Text Domain: vetclinic
+*/
+
+/** vendor styles **/
+@import "./vendor/bootstrap-reboot.css";
+@import "./vendor/bootstrap-grid.css";
+@import "./vendor/fontawesome/fontawesome";
+@import "./vendor/fontawesome/brands";
+@import "./vendor/fontawesome/regular";
+@import "./vendor/fontawesome/solid";
+
+/* base */
+@import "./base/colors";
+@import "./base/vars";
+@import "./base/common";
+@import "./base/fonts";
+
+@import "./utils/mixin";
+@import "./utils/extensions";
+
+/* common components */
+//@import "./components/common/button";
+//@import "./components/common/input";
+//@import "./components/common/textarea";
+
+/* components */
+@import "./components/header";
+@import "./components/logo";
+@import "./components/contacts";
+@import "./components/socials";
+@import "./components/menu";
+@import "./components/mobileMenu";
+@import "./components/section";
+@import "./components/price";
+@import "./components/priceItems";
+@import "./components/spec";
+//@import "./components/callback";
+@import "./components/reviews";
+@import "./components/partners";
+@import "./components/ourContacts";
+@import "./components/modalWindowBg";
+@import "./components/gotoup";
+@import "./components/aboutClinic";
+@import "./components/map";
+@import "./components/footer";
+@import "./components/footerSection";
+@import "./components/copyright";
+
+// for wordpress plugins
+@import "./components/wpForms";
+@import "./components/wpFormsCallback";
+@import "./components/wpFormsVgButton";
+@import "./components/wpFormsVgInput";
+@import "./components/WpFormsTextarea";
+@import "./components/WpFormsOurContacts";
+@import "./components/WpFormsVgCheckbox";
+@import "./components/wpFormsSelect";
+@import "./components/wpFormsRecordDoctor";

@@ -1,0 +1,81 @@
+.Header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+
+  &-Outer {
+    padding: 20px 30px;
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+  }
+
+  &-Blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+  }
+
+  &-Button,
+  &-Contacts {
+    padding-top: 10px;
+  }
+}
+
+@include mq-max(1315px) {
+  .Header {
+    &-Blocks {
+      width: 50%;
+    }
+  }
+}
+
+@include mq-max(1180px) {
+  .Header {
+    &-Blocks {
+      width: 40%;
+      flex-flow: column;
+      align-items: flex-end;
+    }
+    &-Contacts {
+      order: 0;
+    }
+    &-Button {
+      order: 1;
+    }
+    &-Button,
+    &-Contacts {
+      padding-top: 0;
+    }
+    &-Button {
+      margin-top: 15px;
+    }
+  }
+}
+
+@include mq-max(991px) {
+  .Header {
+    &-Button {
+      display: none;
+    }
+  }
+}
+
+@include mq-max(869px) {
+  .Header {
+    &-Blocks {
+      width: auto;
+    }
+  }
+}
+
+@include mq-max(735px) {
+  .Header {
+    &-Blocks {
+      width: 100%;
+      align-items: center;
+    }
+  }
+}

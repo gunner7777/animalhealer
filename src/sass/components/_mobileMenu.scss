@@ -1,0 +1,129 @@
+.MobileMenu {
+  display: none;
+  //position: relative;
+
+  &-Button {
+    @extend %fa-icon;
+    @extend .fas;
+    color: $primary-text;
+    border: none;
+    background-color: $bg-3;
+    font-size: 1.5rem;
+    //display: none;
+
+    &:before {
+      content: fa-content($fa-var-bars);
+    }
+
+    &_Active {
+      animation: opacity0to1 0.6s ease-in;
+      &:before {
+        content: fa-content($fa-var-times);
+      }
+    }
+  }
+
+  &-RecordButton {
+    position: relative;
+    //transform: translateY(25%);
+  }
+
+  &-CloseButton {
+    @extend %fa-icon;
+    @extend .fas;
+    color: $primary-text;
+    border: none;
+    background-color: $bg-3;
+    font-size: 1.5rem;
+    z-index: 100;
+
+    &:before {
+      content: fa-content($fa-var-times);
+    }
+  }
+
+  &_Visible {
+    overflow: hidden;
+  }
+}
+
+@keyframes opacity0to1 {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include mq-max(991px) {
+  .MobileMenu {
+    display: block;
+
+    &-Button {
+      //display: block;
+      position: absolute;
+      top: 1px;
+      /* top: 50%;
+      transform: translateY(-50%); */
+      right: 1px;
+      padding: 8px 15px;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 5;
+    }
+  }
+  &-RecordButton {
+    //display: block;
+  }
+}
+
+@include mq-max(575px) {
+  .MobileMenu {
+    position: relative;
+    top: 50%;
+
+    &-Button {
+      top: -5px;
+    }
+  }
+}
+
+@include mq-max(320px) {
+  .MobileMenu {
+    &-RecordButton {
+      span {
+        display: none;
+      }
+
+      & > .vgButton {
+        width: 120px;
+      }
+    }
+  }
+}
+
+@include mq-max(305px) {
+  .MobileMenu {
+    &-Button {
+      top: 0;
+      padding: 5px 10px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include mq-max(260px) {
+  .MobileMenu {
+    &-Button {
+      right: -10px;
+    }
+    &-RecordButton {
+      position: absolute;
+      left: -8px;
+    }
+  }
+}

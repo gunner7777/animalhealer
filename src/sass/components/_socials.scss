@@ -1,0 +1,207 @@
+.Socials {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  &_Footer {
+    justify-content: flex-start;
+  }
+
+  &-Link {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    @extend %fa-icon;
+    @extend .fab;
+    font-size: 1.4rem;
+    text-align: center;
+    color: $secondary-text;
+    border-radius: 50%;
+    background-color: $bg-1;
+    margin-right: 7px;
+    transition: all 0.3s linear;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_Telegram {
+      border: 1px solid $telegram;
+      background-color: $telegram;
+      &:before {
+        content: fa-content($fa-var-telegram-plane);
+        color: $secondary-text;
+      }
+
+      &:hover {
+        background-color: $bg-3;
+        &:before {
+          color: $telegram;
+        }
+      }
+    }
+
+    &_Vk {
+      border: 1px solid $vk;
+      background-color: $vk;
+      &:before {
+        content: fa-content($fa-var-vk);
+        color: $secondary-text;
+      }
+
+      &:hover {
+        background-color: $bg-3;
+        &:before {
+          color: $vk;
+        }
+      }
+    }
+
+    &_Instagram {
+      border: 1px solid $inst;
+      background-color: $inst;
+      &:before {
+        content: fa-content($fa-var-instagram);
+        color: $secondary-text;
+      }
+      &:hover {
+        background-color: $bg-3;
+        &:before {
+          color: $inst;
+        }
+      }
+    }
+
+    &_Tiktok {
+      border: 1px solid $tiktok;
+      background-color: $tiktok;
+      &:before {
+        content: fa-content($fa-var-tiktok);
+        color: $secondary-text;
+      }
+      &:hover {
+        background-color: $bg-3;
+        &:before {
+          color: $tiktok;
+        }
+      }
+    }
+
+    &_Facebook {
+      border: 1px solid $fb;
+      background-color: $fb;
+      &:before {
+        content: fa-content($fa-var-facebook-f);
+        color: $secondary-text;
+      }
+      &:hover {
+        background-color: $bg-3;
+        &:before {
+          color: $fb;
+        }
+      }
+    }
+  }
+}
+
+@include mq-max(820px) {
+  .Socials {
+    &-Link {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(735px) {
+  .Socials {
+    &-Link {
+      width: 40px;
+      height: 40px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Socials {
+    &-Link {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(300px) {
+  .Socials {
+    &-Link {
+      width: 30px;
+      height: 30px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/* @include mq-max(1140px) {
+  .Socials {
+    margin-right: 20px;
+    margin-left: 20px;
+    &-Link {
+      margin-right: 7px;
+    }
+
+    &_Footer {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+} */
+/* 
+@include mq-max(991px) {
+  .Socials {
+    margin-right: 0px;
+    margin-left: 0px;
+    //width: 49%;
+    justify-content: flex-end;
+
+    &_Footer {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+} */
+
+@include mq-max(767px) {
+  .Socials {
+    /*     margin-right: 0px;
+    margin-left: 0px;
+    //width: 49%; */
+    justify-content: center;
+
+    &_Footer {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .Socials {
+    //width: 100%;
+    justify-content: center;
+    order: 3;
+
+    &_Footer {
+      justify-content: flex-start;
+    }
+  }
+}

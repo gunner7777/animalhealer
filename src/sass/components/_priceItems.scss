@@ -1,0 +1,109 @@
+.PriceItems {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  &-Item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 270px;
+    height: 300px;
+    padding: 20px;
+    margin-right: 13px;
+    margin-left: 13px;
+    margin-bottom: 25px;
+    @extend .custom-box-shadow;
+    cursor: pointer;
+    color: $primary-text;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: $primary-accent-2;
+    }
+
+    & > img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-Title {
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &-Title,
+  &-Description {
+    text-align: center;
+  }
+}
+
+@include mq-max(767px) {
+  .PriceItems {
+    &-Item {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-left: 0;
+
+      & > img {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+
+    &-Title,
+    &-Description {
+      text-align: left;
+    }
+  }
+}
+
+@include mq-max(575px) {
+  .PriceItems {
+    &-Item {
+      & > img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    &-Title {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mq-max(360px) {
+  .PriceItems {
+    &-Item {
+      flex-flow: column nowrap;
+      //align-items: center;
+
+      & > img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+
+    &-Title {
+      font-size: 1.1rem;
+    }
+
+    &-Title,
+    &-Description {
+      text-align: center;
+    }
+  }
+}
